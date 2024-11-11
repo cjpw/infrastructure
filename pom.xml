@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns = "http://maven.apache.org/POM/4.0.0" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.cjpw</groupId>
+    <artifactId>infrastructure</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <resource.delimiter>@</resource.delimiter>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <project.root.version>1.0-SNAPSHOT</project.root.version>
+    </properties>
+
+    <modules>
+        <module>infra-dependencies</module>
+        <module>infra-spec</module>
+        <module>infra-starter</module>
+        <module>infra-starter</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-starter</artifactId>
+                <version>${project.root.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec</artifactId>
+                <version>${project.root.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-dependencies</artifactId>
+                <version>${project.root.version}</version>
+            </dependency>
+        </dependencies>
+
+
+    </dependencyManagement>
+
+</project>
