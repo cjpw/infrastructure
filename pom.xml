@@ -3,6 +3,13 @@
          xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.7.18</version>-->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+<!--    </parent>-->
+
     <groupId>cn.cjpw</groupId>
     <artifactId>infrastructure</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -22,11 +29,12 @@
         <module>infra-dependencies</module>
         <module>infra-spec</module>
         <module>infra-starter</module>
-        <module>infra-starter</module>
+        <module>infra-spec/infra-spec-dao</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+            <!-- inner dependency start-->
             <dependency>
                 <groupId>cn.cjpw</groupId>
                 <artifactId>infra-starter</artifactId>
@@ -42,9 +50,38 @@
                 <artifactId>infra-dependencies</artifactId>
                 <version>${project.root.version}</version>
             </dependency>
+            <!-- inner dependency end-->
         </dependencies>
 
 
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <parameters>true</parameters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>

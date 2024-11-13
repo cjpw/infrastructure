@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>infra-spec-spring</artifactId>
+    <artifactId>infra-spec-redis</artifactId>
 
     <properties>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -17,41 +17,34 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
     <dependencies>
         <!-- inner dependency start-->
         <dependency>
             <groupId>cn.cjpw</groupId>
             <artifactId>infra-spec-base</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.cjpw</groupId>
+            <artifactId>infra-spec-json</artifactId>
+        </dependency>
         <!-- inner dependency end-->
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-core</artifactId>
         </dependency>
-
-
         <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <scope>provided</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <scope>provided</scope>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
         </dependency>
     </dependencies>
 

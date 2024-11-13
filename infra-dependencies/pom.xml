@@ -4,16 +4,22 @@
          xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.cjpw</groupId>
+    <parent>
+        <groupId>cn.cjpw</groupId>
+        <artifactId>infrastructure</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <artifactId>infra-dependencies</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <spring-boot.version>2.7.18</spring-boot.version>
         <lombok.version>1.18.22</lombok.version>
         <hutool.version>5.7.12</hutool.version>
-        <tomcat-core>9.0.58</tomcat-core>
+        <tomcat-core.version>9.0.58</tomcat-core.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
+        <redisson.version>3.18.0</redisson.version>
     </properties>
 
     <dependencyManagement>
@@ -27,15 +33,66 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat-core}</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-core</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+
+
+<!--            <dependency>-->
+<!--                <groupId>org.apache.tomcat.embed</groupId>-->
+<!--                <artifactId>tomcat-embed-core</artifactId>-->
+<!--                <version>${tomcat-core.version}</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- mapping mybatis-plus.version-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.5.16</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.7</version>
             </dependency>
 
         </dependencies>

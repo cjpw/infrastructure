@@ -1,4 +1,4 @@
-package cn.cjpw.infra.spec.spring.core;
+package cn.cjpw.infra.spec.base.infra.spec.spring.core;
 
 import cn.hutool.core.util.StrUtil;
 import org.springframework.core.env.Environment;

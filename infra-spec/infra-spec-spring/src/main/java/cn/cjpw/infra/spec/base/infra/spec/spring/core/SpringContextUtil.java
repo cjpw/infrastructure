@@ -1,13 +1,9 @@
-package cn.cjpw.infra.spec.spring.core;
+package cn.cjpw.infra.spec.base.infra.spec.spring.core;
 
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
@@ -139,24 +135,5 @@ public class SpringContextUtil {
         return getBeanFactory().getType(name);
     }
 
-    public static class ServletCtx {
-        /**
-         * 获取当前的request，注意是在当前线程 web支持
-         *
-         * @return
-         */
-        public static HttpServletRequest getRequest() {
-            return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        }
-
-        /**
-         * 获取当前的response，注意是在当前线程 web支持
-         *
-         * @return
-         */
-        public static HttpServletResponse getResponse() {
-            return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
-        }
-    }
 
 }

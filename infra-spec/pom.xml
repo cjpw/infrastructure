@@ -12,16 +12,19 @@
     <artifactId>infra-spec</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>infra-spec-base</module>
         <module>infra-spec-spring</module>
+        <module>infra-spec-json</module>
+        <module>infra-spec-redis</module>
     </modules>
 
     <properties>
-
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
+            <!-- inner dependency start-->
             <dependency>
                 <groupId>cn.cjpw</groupId>
                 <artifactId>infra-dependencies</artifactId>
@@ -29,6 +32,28 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-json</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- inner dependency end-->
+
         </dependencies>
     </dependencyManagement>
 
