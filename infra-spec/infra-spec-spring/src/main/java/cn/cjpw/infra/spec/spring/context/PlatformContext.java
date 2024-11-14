@@ -1,4 +1,4 @@
-package cn.cjpw.infra.spec.base.infra.spec.spring.context;
+package cn.cjpw.infra.spec.spring.context;
 
 import java.util.HashMap;
 import java.util.Iterator;

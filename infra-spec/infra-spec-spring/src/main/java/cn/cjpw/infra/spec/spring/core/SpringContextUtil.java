@@ -1,4 +1,4 @@
-package cn.cjpw.infra.spec.base.infra.spec.spring.core;
+package cn.cjpw.infra.spec.spring.core;
 
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;

@@ -1,4 +1,4 @@
-package cn.cjpw.infra.spec.base.infra.spec.spring.context;
+package cn.cjpw.infra.spec.spring.context;
 
 import cn.hutool.core.util.StrUtil;
 import org.springframework.web.context.request.RequestContextHolder;

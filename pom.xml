@@ -29,7 +29,6 @@
         <module>infra-dependencies</module>
         <module>infra-spec</module>
         <module>infra-starter</module>
-        <module>infra-spec/infra-spec-dao</module>
     </modules>
 
     <dependencyManagement>

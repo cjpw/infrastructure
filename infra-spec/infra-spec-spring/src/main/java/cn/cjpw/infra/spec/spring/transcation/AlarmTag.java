@@ -1,4 +1,4 @@
-package cn.cjpw.infra.spec.base.infra.spec.spring.transcation;
+package cn.cjpw.infra.spec.spring.transcation;
 
 /**
  * @author jun.chen1

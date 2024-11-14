@@ -23,8 +23,8 @@
             <groupId>cn.cjpw</groupId>
             <artifactId>infra-spec-base</artifactId>
         </dependency>
-
         <!-- inner dependency end-->
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-extension</artifactId>

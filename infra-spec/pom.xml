@@ -16,6 +16,8 @@
         <module>infra-spec-spring</module>
         <module>infra-spec-json</module>
         <module>infra-spec-redis</module>
+        <module>infra-spec-dao</module>
+        <module>infra-spec-all</module>
     </modules>
 
     <properties>
@@ -52,10 +54,22 @@
                 <artifactId>infra-spec-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.cjpw</groupId>
+                <artifactId>infra-spec-all</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- inner dependency end-->
 
         </dependencies>
     </dependencyManagement>
 
 
+    <build>
+    </build>
 </project>
